@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Glassmorphism Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.glass-card {
+  width: 300px;
+  padding: 50px;
+  border-radius: 20px;
+  background: #ffffff1a;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px #00000033;
+  color: #fff;
+  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.glass-card:hover {
+  transform: scale(1.05);
+}
+
+p{
+    margin-top: 12px;
+}
+
+</style>
+
+<body>
+    <div class="glass-card">
+        <h2>Glassmorphism</h2>
+        <p>Scaling Hover Effect</p>
+        <p>Hover in the box</p>
+    </div>
+</body>
+
+</html>
