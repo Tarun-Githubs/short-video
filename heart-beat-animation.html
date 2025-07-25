@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Heartbeat Animation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+  margin: 0;
+  height: 100vh;
+  background: #0f0f0f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heart {
+  width: 100px;
+  height: 90px;
+  background: red;
+  position: relative;
+  transform: rotate(-45deg);
+  animation: heartbeat 1s infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  width: 100px;
+  height: 90px;
+  background: red;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.heart::before {
+  top: -50px;
+  left: 0;
+}
+
+.heart::after {
+  left: 50px;
+  top: 0;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: rotate(-45deg) scale(1);
+  }
+  14% {
+    transform: rotate(-45deg) scale(1.3);
+  }
+  28% {
+    transform: rotate(-45deg) scale(1);
+  }
+  42% {
+    transform: rotate(-45deg) scale(1.3);
+  }
+  70% {
+    transform: rotate(-45deg) scale(1);
+  }
+}
+
+</style>
+<body>
+  <div class="heart"></div>
+</body>
+</html>
