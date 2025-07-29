@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Custom Scrollbar</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #1e1e2f;
+      font-family: sans-serif;
+    }
+
+    .scroll-box {
+      width: 300px;
+      height: 250px;
+      overflow-y: scroll;
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .scroll-box::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    .scroll-box::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    .scroll-box::-webkit-scrollbar-thumb {
+      background: #7c3aed; /* Purple */
+      border-radius: 10px;
+    }
+
+    .scroll-box::-webkit-scrollbar-thumb:hover {
+      background: #5b21b6;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="scroll-box">
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Praesent in urna nec orci eleifend.</p>
+    <p>Duis quis justo non ligula.</p>
+    <p>Aliquam erat volutpat.</p>
+    <p>Curabitur bibendum placerat ex.</p>
+    <p>Suspendisse potenti.</p>
+    <p>Fusce gravida lorem vitae felis.</p>
+    <p>Donec volutpat mi ac mi tincidunt.</p>
+    <p>Etiam ac sagittis ligula.</p>
+    <p>Nunc iaculis dignissim justo.</p>
+    <p>Suspendisse potenti.</p>
+    <p>Fusce gravida lorem vitae felis.</p>
+    <p>Donec volutpat mi ac mi tincidunt.</p>
+    <p>Etiam ac sagittis ligula.</p>
+    <p>Nunc iaculis dignissim justo.</p>
+  </div>
+</body>
+</html>
