@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Wavy Text Animation</title>
+</head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #111;
+        color: white;
+        margin: 0;
+        font-family: sans-serif;
+    }
+
+    .wavy-text span {
+        display: inline-block;
+        font-size: 3rem;
+        animation: wave 1s infinite ease-in-out;
+    }
+
+    .wavy-text span:nth-child(1) {
+        animation-delay: 0s;
+    }
+
+    .wavy-text span:nth-child(2) {
+        animation-delay: 0.1s;
+    }
+
+    .wavy-text span:nth-child(3) {
+        animation-delay: 0.2s;
+    }
+
+    .wavy-text span:nth-child(4) {
+        animation-delay: 0.3s;
+    }
+
+    .wavy-text span:nth-child(5) {
+        animation-delay: 0.4s;
+    }
+
+    .wavy-text span:nth-child(6) {
+        animation-delay: 0.5s;
+    }
+
+    .wavy-text span:nth-child(7) {
+        animation-delay: 0.6s;
+    }
+
+    .wavy-text span:nth-child(8) {
+        animation-delay: 0.7s;
+    }
+
+    .wavy-text span:nth-child(9) {
+        animation-delay: 0.8s;
+    }
+
+    .wavy-text span:nth-child(10) {
+        animation-delay: 0.9s;
+    }
+
+    @keyframes wave {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-15px);
+        }
+    }
+</style>
+
+<body>
+    <h1 class="wavy-text">
+        <span>S</span>
+        <span>U</span>
+        <span>P</span>
+        <span>E</span>
+        <span>R</span>
+        <span>&nbsp;</span>
+        <span>W</span>
+        <span>A</span>
+        <span>V</span>
+        <span>Y</span>
+    </h1>
+</body>
+
+</html>
