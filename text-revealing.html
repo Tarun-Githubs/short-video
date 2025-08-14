@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Analog Clock</title>
+</head>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #cbcbcb;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock {
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, #fff 90%, #ccc 100%);
+  border-radius: 50%;
+  border: 10px solid #333;
+  position: relative;
+  background-image: url('https://media.istockphoto.com/id/1082018386/vector/black-blank-clock-isolated-on-white-for-web-and-design-vector-illustration.jpg?s=612x612&w=0&k=20&c=9sWYxn1zbZQSXn0eZ3mrV4J5Coai8ga9AQfLHlS0wYc=');
+  background-size: 100%;
+}
+
+.hand {
+  position: absolute;
+  background: #333;
+  transform-origin: bottom center;
+  left: 50%;
+  bottom: 50%;
+  transform: translateX(-50%);
+}
+
+.hour {
+  width: 6px;
+  height: 60px;
+  animation: rotateHour 43200s linear infinite; /* 12 hours */
+}
+
+.minute {
+  width: 4px;
+  height: 90px;
+  animation: rotateMinute 3600s linear infinite; /* 1 hour */
+}
+
+.second {
+  width: 2px;
+  height: 100px;
+  background: red;
+  animation: rotateSecond 60s linear infinite; /* 1 minute */
+}
+
+.center {
+  width: 15px;
+  height: 15px;
+  background: #333;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Animations */
+@keyframes rotateHour {
+  from { transform: translateX(-50%) rotate(0deg); }
+  to { transform: translateX(-50%) rotate(360deg); }
+}
+
+@keyframes rotateMinute {
+  from { transform: translateX(-50%) rotate(80deg); }
+  to { transform: translateX(-50%) rotate(360deg); }
+}
+
+@keyframes rotateSecond {
+  from { transform: translateX(-50%) rotate(0deg); }
+  to { transform: translateX(-50%) rotate(360deg); }
+}
+
+</style>
+<body>
+
+<div class="clock">
+  <div class="hand hour"></div>
+  <div class="hand minute"></div>
+  <div class="hand second"></div>
+  <div class="center"></div>
+</div>
+
+</body>
+</html>
