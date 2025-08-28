@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Search Bar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: sans-serif;
+    }
+
+    .search-container {
+        position: relative;
+        height: 50px;
+        width: 50px;
+        background: #222;
+        border-radius: 25px;
+        overflow: hidden;
+        transition: width 0.4s ease;
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+        color: white;
+    }
+
+    .search-container:hover,
+    .search-container:focus-within {
+        width: 250px;
+    }
+
+    .search-input {
+        flex: 1;
+        border: none;
+        outline: none;
+        background: transparent;
+        color: #fff;
+        font-size: 16px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        margin-left: 8px;
+    }
+
+    .search-container:hover .search-input,
+    .search-container:focus-within .search-input {
+        opacity: 1;
+    }
+
+</style>
+
+<body>
+    <div class="search-container"><i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search..." class="search-input">
+    </div>
+</body>
+
+</html>
