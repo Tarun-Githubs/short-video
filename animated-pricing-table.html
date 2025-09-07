@@ -4,131 +4,127 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Animated Pricing Table</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Poppins;
-    }
-
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      background: #f4f6fb;
-    }
-
-    .pricing {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 40px;
-      width: 100%;
-      max-width: 1000px;
-    }
-
-    .card {
-      background: #fff;
-      padding: 30px;
-      border-radius: 20px;
-      text-align: center;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
-
-    .card:hover {
-      transform: translateY(-10px) scale(1.05);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    }
-
-    .card h3 {
-      font-size: 24px;
-      margin-bottom: 15px;
-      color: #333;
-    }
-
-    .price {
-      font-size: 35px;
-      margin: 20px 0;
-      color: #4a90e2;
-      font-weight: bold;
-    }
-
-    .features {
-      list-style: none;
-      margin: 20px 0;
-    }
-
-    .features li {
-      margin: 10px 0;
-      color: #555;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
-      border-radius: 30px;
-      background: #4a90e2;
-      color: #fff;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #357ABD;
-    }
-
-    .card:nth-child(1) .btn,.card:nth-child(3) .btn{
-      background: #4a90e2;
-      color:white;
-    }
-
-    .card:nth-child(2) .features li {
-      color: white;
-    }
-
-
-  </style>
 </head>
-<body>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+  }
 
+  body{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background: #f4f6fb;
+    align-items: center;
+  }
+
+  .pricing{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 40px;
+    width: 100%;
+    max-width: 1000px;
+  }
+
+  .card{
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .card:hover{
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  }
+
+  .card h3{
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+  }
+
+  .price{
+    font-size: 35px;
+    margin: 20px 0;
+    color: #4a90e2;
+    font-weight: bold;
+  }
+
+  .features{
+    list-style-type: none;
+    margin: 20px 0;
+  }
+
+  .features li{
+    margin: 10px 0;
+    color: #555;
+  }
+
+  .btn{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    border-radius: 30px;
+    background: #4a90e2;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .btn:hover{
+    background: #357abd;
+  }
+
+  .card:nth-child(1) .btn, .card:nth-child(3) .btn{
+    background: #4a90e2;
+    color: white;
+  }
+
+  .card:nth-child(2) .features li{
+    color: white;
+  }
+</style>
+<body>
   <div class="pricing">
     <div class="card">
       <h3>Basic</h3>
-      <p class="price">$9/mo</p>
+      <div class="price">$9/mo</div>
       <ul class="features">
         <li>✔ 10 Projects</li>
-        <li>✔ 5 GB Storage</li>
+        <li>✔ 5GB Storage</li>
         <li>✔ Basic Support</li>
       </ul>
       <a href="#" class="btn">Choose</a>
-    </div>
+      </div>
 
-    <div class="card" style="background:#4a90e2; color:#fff;">
-      <h3 style="color: white;">Pro</h3>
-      <p class="price" style="color:white;">$29/mo</p>
+      <div class="card" style="background: #4a90e2; color: #fff; ">
+      <h3 style="color: #fff; ">Pro</h3>
+      <div class="price" style="color: #fff;">$29/mo</div>
       <ul class="features">
         <li>✔ 50 Projects</li>
-        <li>✔ 20 GB Storage</li>
+        <li>✔ 20GB Storage</li>
         <li>✔ Priority Support</li>
       </ul>
-      <a href="#" class="btn" style="background:#fff; color:#4a90e2; font-weight: 600;">Choose</a>
-    </div>
+      <a href="#" class="btn" style="background: #fff; color: #4a90e2; font-weight: 600;">Choose</a>
+      </div>
 
-    <div class="card">
+      <div class="card">
       <h3>Premium</h3>
-      <p class="price">$49/mo</p>
+      <div class="price">$49/mo</div>
       <ul class="features">
         <li>✔ Unlimited Projects</li>
-        <li>✔ 100 GB Storage</li>
+        <li>✔ 100GB Storage</li>
         <li>✔ 24/7 Support</li>
       </ul>
       <a href="#" class="btn">Choose</a>
     </div>
   </div>
-
 </body>
 </html>
