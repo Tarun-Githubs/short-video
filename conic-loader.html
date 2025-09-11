@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Conic Loader</title>
+    <style>
+        body {
+            margin: 0;
+            display: grid;
+            place-items: center;
+            height: 100vh;
+            background: #0f1220
+        }
+
+        .loader {
+            width: 160px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background: conic-gradient(#7cf 0 25%, #0000 0 50%, #b5f 0 75%, #0000 0);
+            mask: radial-gradient(farthest-side, #0000 52%, #000 53%);
+            animation: spin 1s linear infinite
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(1turn)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loader"></div>
+</body>
+
+</html>
