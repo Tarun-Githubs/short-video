@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Bookmark Icon</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #222222;
+      font-family: sans-serif;
+    }
+    
+    .bookmark-container {
+      position: relative;
+      width: 60px;
+      height: 80px;
+    }
+
+    .bookmark-checkbox {
+      display: none;
+    }
+
+    .bookmark {
+      width: 60px;
+      height: 80px;
+      background: #ddd;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 75%, 0 100%);
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .bookmark-checkbox:checked + .bookmark {
+      background: #ff4757;
+      transform: scale(1.1);
+      animation: bounce 0.4s ease;
+    }
+
+
+    @keyframes bounce {
+      0%   { transform: scale(1); }
+      50%  { transform: scale(1.2); }
+      100% { transform: scale(1.1); }
+    }
+
+  </style>
+</head>
+<body>
+  <label class="bookmark-container">
+    <input type="checkbox" class="bookmark-checkbox">
+    <div class="bookmark"></div>
+  </label>
+</body>
+</html>
