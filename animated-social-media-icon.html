@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Media Icon Animations</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> 
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #111;
+    }
+
+    .social-icons{
+        display: flex;
+        gap: 20px;
+    }
+
+    .social-icons a {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 26px;
+        background: #222;
+        border-radius: 50%;
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+        text-decoration: none;
+    }
+
+    .social-icons a:hover{
+        transform: scale(1.2) rotate(360deg);
+        color: #fff;
+    }
+
+    .social-icons a::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        top: 100%;
+        left: 0;
+        transition: all 0.4s ease;
+        z-index: -1;
+    }
+
+    .social-icons a:hover::before{
+        top: 0;
+    }
+
+    .social-icons a.facebook::before{
+        background: #3b5998;
+    }
+
+    .social-icons a.twitter::before{
+        background: #1da1f2;
+    }
+    
+    .social-icons a.instagram::before{
+        background: radial-gradient(circle at 30% 30%, #f58529, #dd2a7b, #8134af, #515bd4);
+    }
+
+    .social-icons a.linkedin::before{
+        background: #0077b5;
+    }
+
+    .social-icons a.youtube::before{
+        background: #ff0000;
+    }
+    
+</style>
+<body>
+  <div class="social-icons">
+    <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+    <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+    <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+    <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+  </div>
+</body>
+</html>
