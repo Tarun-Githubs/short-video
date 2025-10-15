@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Dropdown Menu</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        font-family: poppins;
+        background: #f4f6f8;
+    }
+
+    .navbar{
+        background: blue;
+        padding: 16px 0;
+    }
+
+    .menu{
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        gap: 32px;
+    }
+
+    .menu > li > a{
+        text-decoration: none;
+        color: white;
+        padding: 16px;
+        transition: 0.3s;
+    }
+
+    .dropdown{
+        position: relative;
+    }
+
+    .dropdown-menu{
+        list-style-type: none;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        background: blue;
+        min-width: 180px;
+        display: none;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .dropdown-menu li a{
+        color: white;
+        padding: 10px 15px;
+        display: block;
+        transition: 0.3s;
+        text-decoration: none;
+    }
+
+    .dropdown-menu li a:hover{
+        background: #fdecec;
+        color: black;
+        text-decoration: underline;
+    }
+
+    .dropdown:hover .dropdown-menu{
+        display: flex;
+    }
+</style>
+<body>
+    <nav class="navbar">
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+
+            <li class="dropdown">
+                <a href="#">Service ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">App Development</a></li>
+                    <li><a href="#">SEO Optimization</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
